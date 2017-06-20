@@ -290,7 +290,6 @@ label.description {
 }
 
 input.text {
-	background:#fff url(../../../images/shadow.gif) repeat-x top;
 	border-bottom:1px solid #ddd;
 	border-left:1px solid #c3c3c3;
 	border-right:1px solid #c3c3c3;
