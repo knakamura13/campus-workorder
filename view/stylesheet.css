@@ -29,7 +29,7 @@ body {
 
 @media screen and (max-width: 660px) {
 	#form_container {
-		width: 80%;
+		width: 100%;
 	}
 
 	.two_columns {
@@ -37,11 +37,11 @@ body {
 	}
 
 	#top_img {
-		width: 80%;
+		width: 100%;
 	}
 
 	#bottom_img {
-		width: 80%;
+		width: 100%;
 	}
 }
 
@@ -269,7 +269,7 @@ form .section_break p {
 }
 
 /**** Footer ****/
-#h3_footer_message {
+#footer_message {
 	color:#555;
 }
 
