@@ -12,8 +12,9 @@ error_reporting(0);
 	    							  $_POST['element_8_3'] . $_POST['element_8_4'] . 
 	    							  $_POST['element_8_5'] . $_POST['element_8_6'] .  "\n" .
 	    		"Details: \t" 		. trim(preg_replace('/\s\s+/', ' ', $_POST['element_4']))  . "\n" .
-	    		"Image: \t" 		. $_POST['element_3']  . "\n";
-	    $ret = file_put_contents('mydata.txt', $data, FILE_APPEND | LOCK_EX);
+	    		"Image: \t" 		. $_POST['element_3']  . "\n" .
+	    		"-------------------------------------------------------------- \n";
+	    $ret = file_put_contents('../view/mydata.txt', $data, FILE_APPEND | LOCK_EX);
 	    if($ret === false) {
 	        die('There was an error writing this file');
 	    }
