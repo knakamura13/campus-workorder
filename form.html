@@ -11,7 +11,7 @@
 	<img id="top_img" src="top.png" alt=""> 
 	<div id="form_container">
 		<h1 id="h1_logo"><a>Campus Workorder</a><img id="logo_img" src="apu_logo_red_long.png" alt=""></h1>
-		<form id="form_37828" class="form_content" enctype="multipart/form-data" method="post" action="">
+		<form id="form_37828" class="form_content" enctype="multipart/form-data" method="POST" action="myprocessingscript.php">
 		
 		<!-- header -->
 		<div class="form_description">
@@ -45,9 +45,9 @@
 			</div>
 			</li>		
 
-			<!-- SECTION: REQUESTOR E-MAIL -->
+			<!-- SECTION: REQUESTOR EMAIL -->
 			<li id="li_7" >
-			<label class="description" for="element_7">Requestor E-mail </label>
+			<label class="description" for="element_7">Requestor Email </label>
 			<div>
 				<input id="element_7" name="element_7" class="element text medium" type="text" maxlength="255" value=""/> 
 			</div>
@@ -59,11 +59,11 @@
 			<li id="li_9" >
 			<label class="description" for="element_9">Campus </label>
 			<span>
-				<input id="element_9_1" name="element_9" class="element radio" type="radio" value="1" />
+				<input id="element_9_1" name="element_9" class="element radio" type="radio" value="West Campus" />
 				<label class="choice" for="element_9_1">West Campus</label>
-				<input id="element_9_2" name="element_9" class="element radio" type="radio" value="2" />
+				<input id="element_9_2" name="element_9" class="element radio" type="radio" value="East Campus" />
 				<label class="choice" for="element_9_2">East Campus</label>
-				<input id="element_9_3" name="element_9" class="element radio" type="radio" value="3" />
+				<input id="element_9_3" name="element_9" class="element radio" type="radio" value="Regional Centers" />
 				<label class="choice" for="element_9_3">Regional Centers</label>
 			</span> 
 			</li>		
@@ -74,11 +74,11 @@
 			<div>
 			<select class="element select medium" id="element_10" name="element_10"> 
 				<option value="" selected="selected"></option>
-				<option value="1" >Admissions -UG</option>
-				<option value="2" >Admissions Processing Cent</option>
-				<option value="3" >Alosta Place</option>
-				<option value="4" >Alumni House</option>
-				<option value="5" >Art Center</option>
+				<option value="Admissions -UG" >Admissions -UG</option>
+				<option value="Admissions Processing Cent" >Admissions Processing Cent</option>
+				<option value="Alosta Place" >Alosta Place</option>
+				<option value="Alumni House" >Alumni House</option>
+				<option value="Art Center" >Art Center</option>
 			</select>
 			</div> 
 			</li>		
@@ -93,11 +93,11 @@
 			<div>
 			<select class="element select medium" id="element_1" name="element_1"> 
 				<option value="" selected="selected"></option>
-				<option value="1" >Facilities Management</option>
-				<option value="2" >IMT</option>
-				<option value="3" >Housing Office</option>
-				<option value="4" >Campus Safety</option>
-				<option value="5" >Other</option>
+				<option value="Facilities Management" >Facilities Management</option>
+				<option value="IMT" >IMT</option>
+				<option value="Housing Office" >Housing Office</option>
+				<option value="Campus Safety" >Campus Safety</option>
+				<option value="Other" >Other</option>
 			</select>
 			</div>
 			</li>		
@@ -106,17 +106,17 @@
 			<li id="li_8" >
 			<label class="description" for="element_8">Type of Service Needed </label>
 			<span>
-				<input id="element_8_1" name="element_8_1" class="element checkbox" type="checkbox" value="1" />
+				<input id="element_8_1" name="element_8_1" class="element checkbox" type="checkbox" value="First option" />
 				<label class="choice" for="element_8_1">First option</label>
-				<input id="element_8_2" name="element_8_2" class="element checkbox" type="checkbox" value="1" />
+				<input id="element_8_2" name="element_8_2" class="element checkbox" type="checkbox" value="Second option" />
 				<label class="choice" for="element_8_2">Second option</label>
-				<input id="element_8_3" name="element_8_3" class="element checkbox" type="checkbox" value="1" />
+				<input id="element_8_3" name="element_8_3" class="element checkbox" type="checkbox" value="Third option" />
 				<label class="choice" for="element_8_3">Third option</label>
-				<input id="element_8_4" name="element_8_4" class="element checkbox" type="checkbox" value="1" />
+				<input id="element_8_4" name="element_8_4" class="element checkbox" type="checkbox" value="Fourth option" />
 				<label class="choice" for="element_8_4">Fourth option</label>
-				<input id="element_8_5" name="element_8_5" class="element checkbox" type="checkbox" value="1" />
+				<input id="element_8_5" name="element_8_5" class="element checkbox" type="checkbox" value="Fifth option" />
 				<label class="choice" for="element_8_5">Fifth option</label>
-				<input id="element_8_6" name="element_8_6" class="element checkbox" type="checkbox" value="1" />
+				<input id="element_8_6" name="element_8_6" class="element checkbox" type="checkbox" value="Other" />
 				<label class="choice" for="element_8_6">Other</label>
 			</span>
 			</li>		
@@ -153,7 +153,7 @@
 			</li>
 				
 			<li class="buttons">
-				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Save Data" />
 			</li>
 		</ul>
 		</form>	
