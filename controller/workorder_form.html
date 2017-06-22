@@ -14,6 +14,7 @@
 
 		<!-- form with php script -->
 		<form id="form_37828" class="form_content" enctype="multipart/form-data" method="POST" action="export_script.php">
+
 		<!-- header -->
 		<div class="form_description">
 			<h2>Submit a Campus Workorder</h2>
@@ -23,124 +24,137 @@
 		<ul>
 		<div class="two_columns" id="first_half">
 			<div class="quadrant">
-			<!-- SECTION: requestor name -->
-			<li id="nameSection" >
-				<label class="description" for="nameSection">Requestor Name </label>
-				<div id="first_last_name">
-				<span>
-					<input id="firstNameField" name= "firstNameField" class="element text" maxlength="100" size="8" value=""/>
-					<label>First</label>
-				</span>
-				<span>
-					<input id="lastNameField" name= "lastNameField" class="element text" maxlength="100" size="14" value=""/>
-					<label>Last</label>
-				</span>
-				</div>
-			</li>		
+				<!-- SECTION: requestor name -->
+				<li id="nameSection" >
+					<label class="description" for="nameSection">Requestor Name </label>
+					<div id="first_last_name">
+					<span>
+						<input id="firstNameField" name= "firstNameField" class="element text" maxlength="100" size="8" value=""/>
+						<label>First</label>
+					</span>
+					<span>
+						<input id="lastNameField" name= "lastNameField" class="element text" maxlength="100" size="14" value=""/>
+						<label>Last</label>
+					</span>
+					</div>
+				</li>		
 
-			<!-- SECTION: requestor phone number -->
-			<li id="phoneSection" >
-				<label class="description" for="phoneField">Phone Number </label>
-				<div>
-					<input id="phoneField" name="phoneField" class="element text medium" type="text" maxlength="10" value=""/> 
-				</div>
-			</li>		
+				<!-- SECTION: requestor phone number -->
+				<li id="phoneSection" >
+					<label class="description" for="phoneField">Phone Number </label>
+					<div>
+						<input id="phoneField" name="phoneField" class="element text medium" type="text" maxlength="10" value=""/> 
+					</div>
+				</li>		
 
-			<!-- SECTION: requestor email -->
-			<li id="emailSection" >
-				<label class="description" for="emailField">Requestor Email </label>
-				<div>
-					<input id="emailField" name="emailField" class="element text medium" type="text" maxlength="255" value=""/> 
-				</div>
-			</li>
-			</div>		
-
-			<div class="quadrant">
-			<!-- SECTION: campus selection -->
-			<li id="campusSection" >
-				<label class="description" for="campusSection">Campus </label>
-				<span>
-					<input id="campusWest" name="campusWest" class="element radio" type="radio" value="West Campus" />
-					<label class="choice" for="campusWest">West Campus</label>
-					<input id="campusEast" name="campusEast" class="element radio" type="radio" value="East Campus" />
-					<label class="choice" for="campusEast">East Campus</label>
-					<input id="campusRegional" name="campusRegional" class="element radio" type="radio" value="Regional Centers" />
-					<label class="choice" for="campusRegional">Regional Centers</label>
-				</span> 
-			</li>		
-
-			<!-- SECTION: building selection -->
-			<li id="buildingSection" >
-				<label class="description" for="buildingSection">Building Name </label>
-				<div>
-				<select class="element select medium" id="buildingSection" name="buildingSection"> 
-					<option value="" selected="selected"></option>
-					<option value="Admissions -UG" >Admissions -UG</option>
-					<option value="Admissions Processing Cent" >Admissions Processing Cent</option>
-					<option value="Alosta Place" >Alosta Place</option>
-					<option value="Alumni House" >Alumni House</option>
-					<option value="Art Center" >Art Center</option>
-				</select>
-				</div> 
-			</li>		
+				<!-- SECTION: requestor email -->
+				<li id="emailSection" >
+					<label class="description" for="emailField">Requestor Email </label>
+					<div>
+						<input id="emailField" name="emailField" class="element text medium" type="text" maxlength="255" value=""/> 
+					</div>
+				</li>
 			</div>
 		</div>
 
 		<div class="two_columns" id="second_half">
 			<div class="quadrant">
-			<!-- SECTION: department selection -->
-			<li id="departmentSection" >
-				<label class="description" for="departmentSection">Department Name </label>
-				<div>
-				<select class="element select medium" id="departmentSection" name="departmentSection"> 
-					<option value="" selected="selected"></option>
-					<option value="Facilities Management" >Facilities Management</option>
-					<option value="IMT" >IMT</option>
-					<option value="Housing Office" >Housing Office</option>
-					<option value="Campus Safety" >Campus Safety</option>
-					<option value="Other" >Other</option>
-				</select>
-				</div>
-			</li>		
+				<!-- SECTION: campus selection -->
+				<li id="campusSection" >
+					<label class="description" for="campusName">Campus </label>
+					<span>
+						<input id="campusRadio" name="campusRadio" class="element radio" type="radio" value="West Campus" />
+						<label class="choice" for="campusWest">West Campus</label>
+						<input id="campusRadio" name="campusRadio" class="element radio" type="radio" value="East Campus" />
+						<label class="choice" for="campusEast">East Campus</label>
+						<input id="campusRadio" name="campusRadio" class="element radio" type="radio" value="Regional Centers" />
+						<label class="choice" for="campusRegional">Regional Centers</label>
+					</span> 
+				</li>		
 
-			<!-- SECTION: service selection -->
-			<li id="serviceSection" >
-				<label class="description" for="serviceSection">Type of Service Needed </label>
-				<span>
-					<input id="serviceOne" name="serviceOne" class="element checkbox" type="checkbox" value="First option" />
-					<label class="choice" for="serviceOne">First option</label>
-					<input id="serviceTwo" name="serviceTwo" class="element checkbox" type="checkbox" value="Second option" />
-					<label class="choice" for="serviceTwo">Second option</label>
-					<input id="serviceThree" name="serviceThree" class="element checkbox" type="checkbox" value="Third option" />
-					<label class="choice" for="serviceThree">Third option</label>
-					<input id="serviceFour" name="serviceFour" class="element checkbox" type="checkbox" value="Fourth option" />
-					<label class="choice" for="serviceFour">Fourth option</label>
-					<input id="serviceFive" name="serviceFive" class="element checkbox" type="checkbox" value="Fifth option" />
-					<label class="choice" for="serviceFive">Fifth option</label>
-					<input id="serviceSix" name="serviceSix" class="element checkbox" type="checkbox" value="Other" />
-					<label class="choice" for="serviceSix">Other</label>
-				</span>
-			</li>		
+				<!-- SECTION: building selection -->
+				<li id="buildingSection" >
+					<label class="description" for="buildingName">Building Name </label>
+					<div>
+					<select class="element select medium" id="buildingDropdown" name="buildingDropdown"> 
+						<option value="" selected="selected"></option>
+					</select>
+					</div> 
+				</li>
+				<!-- jquery script to dynamically change building list -->
+			    <script src="jquery.js"></script>
+			    <script>
+			    $(document).ready(function() {
+			    	$('#campusSection').on('change', function() {
+						var selectedIndex = $("input[name='campusRadio']:checked").val();
+			            if(selectedIndex){
+						    $('#buildingDropdown').html('');
+						    if (selectedIndex == 'West Campus') {
+								$('#buildingDropdown').append('<option value="" selected="selected" ></option>');	
+								$('#buildingDropdown').append('<option value="Not Applicable" >Not Applicable</option>');
+						        $('#buildingDropdown').append('<option value="Admin West" >Admin West</option>');
+						        $('#buildingDropdown').append('<option value="Babby Building - 680 E. Alosta" >Babby Building - 680 E. Alosta</option>');
+						        $('#buildingDropdown').append('<option value="Darling Library Building 3" >Darling Library Building 3</option>');
+						    } else if (selectedIndex == 'East Campus') {
+						        $('#buildingDropdown').append('<option value="" selected="selected" ></option>');
+						        $('#buildingDropdown').append('<option value="Not Applicable" >Not Applicable</option>');
+						        $('#buildingDropdown').append('<option value="Adams Hall" >Adams Hall</option>');
+						        $('#buildingDropdown').append('<option value="Alosta Place" >Alosta Place</option>');
+						        $('#buildingDropdown').append('<option value="Smith Hall" >Smith Hall</option>');
+						    } else if (selectedIndex == 'Regional Centers') {
+						        $('#buildingDropdown').append('<option value="" selected="selected" ></option>');
+						        $('#buildingDropdown').append('<option value="Not Applicable" >Not Applicable</option>');
+						        $('#buildingDropdown').append('<option value="Citrus Edge" >Citrus Edge</option>');
+						        $('#buildingDropdown').append('<option value="High Desert Regional Campus" >High Desert Regional Campus</option>');
+						        $('#buildingDropdown').append('<option value="Inland Empire Regional Campus" >Inland Empire Regional Campus</option>');
+						        $('#buildingDropdown').append('<option value="Los Angeles Regional Site" >Los Angeles Regional Site</option>');
+						        $('#buildingDropdown').append('<option value="Monrovia Site" >Monrovia Site</option>');
+						        $('#buildingDropdown').append('<option value="Murrieta Regional Campus" >Murrieta Regional Campus</option>');
+						        $('#buildingDropdown').append('<option value="Orange County Regional Campus" >Orange County Regional Campus</option>');
+						        $('#buildingDropdown').append('<option value="San Diego Regional Campus" >San Diego Regional Campus</option>');
+						        $('#buildingDropdown').append('<option value="Ventura Regional Campus" >Ventura Regional Campus</option>');
+						    } else {
+								$('#buildingDropdown').append('<option value="" selected="selected" ></option>');
+								$('#buildingDropdown').append('<option value="Nothing Selected" >Ventura Regional Campus</option>');
+						    }
+						}
+					});
+			    });
+			    </script>
+				<!-- SECTION: department selection -->
+				<li id="departmentSection" >
+					<label class="description" for="departmentName">Department Name </label>
+					<div>
+					<select class="element select medium" id="departmentDropdown" name="departmentDropdown"> 
+						<option value="" selected="selected"></option>
+						<option value="Facilities Management" >Facilities Management</option>
+						<option value="IMT" >IMT</option>
+						<option value="Housing Office" >Housing Office</option>
+						<option value="Campus Safety" >Campus Safety</option>
+						<option value="Other" >Other</option>
+					</select>
+					</div>
+				</li>
 			</div>
 
 			<div class="quadrant" id="add_information">
-			<!-- SECTION: additional information -->
-			<li id="informationSection" >
-				<label class="description" for="informationSection">Additional Information </label>
-				<div>
-					<textarea id="informationSection" name="informationSection" class="element textarea small" maxlength="500"> </textarea> 
-				</div>
-			</li>			
-			</div>
-		</div>
+				<!-- SECTION: additional information -->
+				<li id="informationSection" >
+					<label class="description" for="informationText">Additional Information </label>
+					<div>
+						<textarea id="informationText" name="informationText" class="element textarea small" maxlength="500"> </textarea> 
+					</div>
+				</li>	
 
-			<!-- SECTION: attach an image -->
-			<li id="imageSection" >
-			<label class="description" for="imageSection">Attach an Image </label>
-			<div>
-				<input id="imageSection" name="imageSection" class="element file" type="file"/> 
+				<!-- SECTION: attach an image -->
+				<li id="imageSection" >
+					<label class="description" for="attachImage">Attach an Image </label>
+					<div>
+						<input id="imageFile" name="imageFile" class="element file" type="file"/> 
+					</div>
+				</li>			
+				</div>
 			</div>
-			</li>	
 
 			<!-- SECTION: footer -->
 			<li class="section_break">

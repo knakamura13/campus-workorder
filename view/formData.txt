@@ -1,0 +1,27 @@
+Name: 		 
+Phone: 		
+Email: 		
+Campus: 	
+Building: 	
+Department: 	
+Details: 	okay done
+Image: 	
+-------------------------------------------------------------- 
+Name: 		Kyle Nakamura
+Phone: 		6263885416
+Email: 		knakamura13@apu.edu
+Campus: 	1
+Building: 	Smith Hall
+Department: 	IMT
+Details: 	My wifi is down! It's annoying.
+Image: 	
+-------------------------------------------------------------- 
+Name: 		 
+Phone: 		
+Email: 		
+Campus: 	West Campus
+Building: 	
+Department: 	Campus Safety
+Details: 	I need something
+Image: 	
+-------------------------------------------------------------- 
