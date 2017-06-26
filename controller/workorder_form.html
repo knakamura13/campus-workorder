@@ -20,44 +20,9 @@
 			<h2>Submit a Campus Workorder</h2>
 			<p>Request a service from Facilities Management, IMT, Housing Office, Campus Safety, and more.</p>
 		</div>						
-		
+
 		<ul>
 		<div class="two_columns" id="first_half">
-			<div class="quadrant">
-				<!-- SECTION: requestor name -->
-				<li id="nameSection" >
-					<label class="description" for="nameSection">Requestor Name </label>
-					<div id="first_last_name">
-					<span>
-						<input id="firstNameField" name= "firstNameField" class="element text" maxlength="100" size="8" value=""/>
-						<label>First</label>
-					</span>
-					<span>
-						<input id="lastNameField" name= "lastNameField" class="element text" maxlength="100" size="14" value=""/>
-						<label>Last</label>
-					</span>
-					</div>
-				</li>		
-
-				<!-- SECTION: requestor phone number -->
-				<li id="phoneSection" >
-					<label class="description" for="phoneField">Phone Number </label>
-					<div>
-						<input id="phoneField" name="phoneField" class="element text medium" type="text" maxlength="10" value=""/> 
-					</div>
-				</li>		
-
-				<!-- SECTION: requestor email -->
-				<li id="emailSection" >
-					<label class="description" for="emailField">Requestor Email </label>
-					<div>
-						<input id="emailField" name="emailField" class="element text medium" type="text" maxlength="255" value=""/> 
-					</div>
-				</li>
-			</div>
-		</div>
-
-		<div class="two_columns" id="second_half">
 			<div class="quadrant">
 				<!-- SECTION: campus selection -->
 				<li id="campusSection" >
@@ -150,11 +115,46 @@
 				<li id="imageSection" >
 					<label class="description" for="attachImage">Attach an Image </label>
 					<div>
-						<input id="imageFile" name="imageFile" class="element file" type="file"/> 
+						<input id="userfile" name="userfile" class="element file" type="file"/> 
 					</div>
 				</li>			
-				</div>
 			</div>
+		</div>
+
+		<div class="two_columns" id="second_half">
+			<div class="quadrant">
+				<!-- SECTION: requestor name -->
+				<li id="nameSection" >
+					<label class="description" for="nameSection">Requestor Name </label>
+					<div id="first_last_name">
+					<span class="input-list style-2 clearfix">
+						<input id="firstNameField" name= "firstNameField" class="element text" type="text" maxlength="100" size="8" value=""/>
+						<label>First</label>
+					</span>
+					<span class="input-list style-2 clearfix">
+						<input id="lastNameField" name= "lastNameField" class="element text" type="text" maxlength="100" size="14" value=""/>
+						<label>Last</label>
+					</span>
+					</div>
+				</li>		
+
+				<!-- SECTION: requestor phone number -->
+				<li id="phoneSection" >
+					<label class="description" for="phoneField">Phone Number </label>
+					<div class="input-list style-2 clearfix">
+						<input id="phoneField" name="phoneField" class="element text medium" type="text" maxlength="10" value=""/> 
+					</div>
+				</li>		
+
+				<!-- SECTION: requestor email -->
+				<li id="emailSection" >
+					<label class="description" for="emailField">Requestor Email </label>
+					<div class="input-list style-2 clearfix">
+						<input id="emailField" name="emailField" class="element text medium" type="text" maxlength="255" value=""/> 
+					</div>
+				</li>
+			</div>
+		</div>
 
 			<!-- SECTION: footer -->
 			<li class="section_break">
