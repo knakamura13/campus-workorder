@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Campus Workorder</title>
+	<link rel="stylesheet" type="text/css" href="stylesheet.css"> 
+</head>
+
+<body id="service-request" >
+	<div id="form-container">
+		<!-- <form id="request-form" class="form-content" enctype="multipart/form-data" method="POST" action="../controller/export_script.php"> -->
+		<form id="request-form" class="form-content" enctype="multipart/form-data" method="POST" action="../vendor/zendesk/zendesk_api_client_php/samples/tickets/createTicketWithAttachment.php">
+
+			<div id=header-div>
+				<div id="header">
+					<h2 id="form-title">Submit a request</h2>
+					<p>Request a service from Facilities Management, IMT, Housing Office, Campus Safety, and more.</p>
+				</div>					
+			</div>	
+
+			<div id="main-div">
+				<div id="form-top-half">
+					<div id="description-section">
+						<label class="description">Description</label>
+						<textarea class="long-text-input" id="description" name="description" maxlength="500"> </textarea> 
+					</div>
+
+					<div id="location-section">
+						<label class="description">Location</label>
+						<textarea class="long-text-input" id="location" name="location" maxlength="500"> </textarea> 
+					</div>	
+
+					<div id="pride-section">
+						<input id="pride" name="pride" type="checkbox"> This is a Pride of Place issue. 
+					</div>	
+
+					<div id="image-section">
+					    <label id="image-label">Add file</label>
+					    <input id="image-button" name="image" type="file">
+					</div>
+				</div>
+
+				<div id="form-bottom-half">
+					<div id="email-section">
+						<label class="description">Requestor Email </label>
+						<input class="medium-text" id="email"  name="email" type="text" maxlength="255" value=""/> 
+					</div>	
+
+					<div id="phone-section">
+						<label class="description">Phone Number </label>
+						<input class="medium-text" id="phone" name="phone" type="text" maxlength="10" value=""/> 
+					</div>	
+
+					<div class="apu-button">
+						<input class="button-text" id="submit" type="submit" value="Save Data" />
+					</div>
+				</div>
+			</div>
+		</form>	
+	</div>
+</body>
+</html>
