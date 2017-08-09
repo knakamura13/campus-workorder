@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 
 include("../../../../../vendor/autoload.php");
 
@@ -34,26 +35,65 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $targetfile)) {
             'name' => $_FILES['image']['name']
         ]);
 
+
+        // Build message body
+        $textBody = "";
+        if (isset($_POST["description"])) {
+            $textBody .= "<message>\n";
+            $textBody .= $description."\n";
+            $textBody = preg_replace('/^[ \t]*[\r\n]+/m', '', $textBody);
+            $textBody .= "</message>\n\n";
+        }
+        if (isset($_POST["location"])) {
+            $textBody .= "Location: \t";
+            $textBody .= $location."\n";
+        }
+        if (isset($_POST["pride"])) {
+            $textBody .= "Pride of place: \t";
+            if ($pride === "on") {
+                $textBody .= "YES\n";
+            } else {
+                $textBody .= "NO\n";
+            }
+        }
+        $textBody .= "Contact information:\n";
+        if (isset($_POST["phone"])) {
+            $textBody .= "Phone: \t";
+            $textBody .= $phone."\n";
+        }
+        if (isset($_POST["email"])) {
+            $textBody .= "Email: \t";
+            $textBody .= $email."\n";
+        }
+
+
         // Create a new ticket with attachment
         $newTicket = $client->tickets()->create([
             'type' => 'problem',
             'subject'  => 'The quick brown fox',
             'comment'  => array(
-                'body' => $_POST['description'],
+                'body' => $textBody,
                 'uploads' => [$attachment->upload->token]
             ),
             'requester' => array(
                 'locale_id' => '1',
-                'name' => 'Example User',
-                'email' => 'customer@example.com',
+                'name' => 'Kyle Nakamura',
+                'email' => $username,
             ),
             'priority' => 'normal',
         ]);
 
-        // Show result
-        echo "<pre>";
-        print_r($newTicket);
-        echo "</pre>";
+        $ticketID = $newTicket->ticket->id;
+        if (is_numeric($ticketID)) {
+        echo "The Zendesk ticket was created.";
+        echo "<script>";
+            $url = 'https://'.$subdomain.'.zendesk.com/agent/tickets/'.$ticketID;
+            echo "window.open('$url');".PHP_EOL;
+            echo "history.go(-1);";
+        echo "</script>";
+        } else {
+            echo "There was an error and the Zendesk ticket was not created.";
+        }
     } catch (\Zendesk\API\Exceptions\ApiResponseException $e) {
         echo $e->getMessage().'</br>';
     }
