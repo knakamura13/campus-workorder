@@ -26,7 +26,7 @@ $textBody = "";
 if (isset($_POST["description"])) {
     $textBody .= $description."\n";
     $textBody = preg_replace('/^[ \t]*[\r\n]+/m', '', $textBody);
-    $textBody .= "---END MESSAGE---\n\n";
+    $textBody .= "\n";
 }
 if (isset($_POST["location"])) {
     $textBody .= "Location: ";
@@ -35,13 +35,12 @@ if (isset($_POST["location"])) {
 if (isset($_POST["pride"])) {
     $textBody .= "Pride of place: ";
     if ($pride === "on") {
-        $textBody .= "YES\n";
+        $textBody .= "YES\n\n";
     } else {
-        $textBody .= "NO\n";
+        $textBody .= "NO\n\n";
     }
 }
 if (isset($_POST["phone"]) || (isset($_POST["email"]))) {
-    $textBody .= "CONTACT INFORMATION:\n";
     if (isset($_POST["phone"])) {
         $textBody .= "Phone: ";
         $textBody .= $phone."\n";
@@ -78,6 +77,7 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $targetfile)) {
             // ),
             'priority' => 'normal',
         ]);
+        unlink($targetfile);
     } catch (\Zendesk\API\Exceptions\ApiResponseException $e) {
         echo $e->getMessage().'</br>';
     }
@@ -99,13 +99,13 @@ if (move_uploaded_file($_FILES['image']['tmp_name'], $targetfile)) {
 }
 
 $ticketID = $newTicket->ticket->id;
-if (is_numeric($ticketID)) {
-echo "The Zendesk ticket was created.";
-echo "<script>";
+
+if (is_numeric($ticketID)) { ?>
+    <script> <?php 
     $url = 'https://'.$subdomain.'.zendesk.com/agent/tickets/'.$ticketID;
     echo "window.open('$url');".PHP_EOL;
-    echo "history.go(-1);";
-echo "</script>";
+    echo "history.go(-1);"; ?>
+    </script> <?php
 } else {
     echo "There was an error and the Zendesk ticket was not created.";
 }
